@@ -1,0 +1,577 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  background-color: black;
+  height: 48px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 2;
+}
+nav .desktop-menu {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 0px 12px;
+  margin: 0px 10px 0px 0px;
+}
+nav .desktop-menu li {
+  list-style: none;
+}
+nav .desktop-menu li .navItem {
+  text-decoration: none;
+  color: white;
+  margin: 0px 8px;
+  padding: 4px 7px;
+  border-radius: 20px;
+  font-size: 1.35em;
+}
+nav .desktop-menu li a:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(16, 155, 219);
+}
+.active {
+  text-decoration: none;
+  color: rgb(106, 199, 241);
+  margin: 0px 8px;
+  padding: 4px 7px;
+  border-radius: 20px;
+  font-size: 1.35em;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 8px;
+}
+
+img {
+  margin: 6px;
+  width: 35px;
+  height: 35px;
+}
+#logo-text {
+  color: white;
+  font-size: 2em;
+}
+#blue {
+  color: rgb(16, 155, 219);
+}
+
+/* Mobile Navigation Bar=================================== */
+#burger {
+  display: none;
+  cursor: pointer;
+  margin-right: 7px;
+  z-index: 3;
+}
+.layer {
+  border: 2px solid rgb(255, 255, 255);
+  margin: 6px;
+  width: 30px;
+}
+#layer2 {
+  transition: all 0.3s linear;
+}
+#layer1 {
+  transition: all 0.3s linear;
+}
+#layer3 {
+  transition: all 0.3s linear;
+}
+.mobile-menu {
+  position: fixed;
+  top: 47px;
+  right: 5px;
+  width: 50%;
+  height: fit-content;
+  padding: 0px;
+  background-color: black;
+  margin: 0px;
+  transform: translateY(-130%);
+  z-index: 1;
+  transition: all 0.3s linear;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px;
+  margin-left: 16px;
+  margin-right: 35px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.mobile-menu li {
+  display: flex;
+  list-style: none;
+}
+.nav2 {
+  border-bottom: 1px solid white;
+}
+.nav3 {
+  padding-top: 4px;
+}
+.mobile-menu li .navItem2 {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3em;
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+}
+.activeM {
+  text-decoration: none;
+  color: rgb(106, 199, 241);
+  font-size: 1.3em;
+  width: 100%;
+  height: 100%;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 20px;
+}
+
+/* Home Page=================================================== */
+
+.home {
+  display: flex;
+  position: absolute;
+  top: 48px;
+  height: 93%;
+  width: 100%;
+  justify-content: center;
+  background: url(./components/background1.jpg) no-repeat center center/cover;
+  z-index: -2;
+}
+
+
+.home form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.home form::before {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+.home .title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px;
+}
+.home .title input {
+  width: 50%;
+  font-size: 1.2em;
+  padding-left: 5px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+}
+.home .title input:focus {
+  outline-color: rgb(16, 155, 219);
+}
+.home .description {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.home .description textarea {
+  width: 50%;
+  font-size: 1.3em;
+  padding-left: 5px;
+  background: none;
+  border: 2px solid white;
+  color: white;
+}
+.home .description textarea:focus {
+  outline-color: rgb(16, 155, 219);
+}
+#addBtn {
+  padding: 5px 10px;
+  margin: 15px auto 25px auto;
+  background-color: rgb(16, 155, 219);
+  color: white;
+  border: none;
+  box-shadow: 2px 2px 5px rgb(255, 255, 255);
+  font-size: 1.6em;
+  width: 20%;
+  cursor: pointer;
+}
+#addBtn:disabled {
+  cursor: default;
+  pointer-events: none;
+  background-color: rgb(93, 170, 206);
+  box-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+#addBtn:hover {
+  background-color: rgb(14, 126, 179);
+}
+
+/* Notes Page========================================================= */
+
+#notes {
+  position: absolute;
+  top: 48px;
+  width: 99%;
+}
+#yourNotes {
+  display: flex;
+  justify-content: center;
+  width: 98%;
+  padding: 10px;
+  font-size: 3em;
+  font-family: "Aboreto";
+}
+#notesNull {
+  position: absolute;
+  top: 195px;
+  font-weight: lighter;
+  font-size: 2em;
+}
+#notesNull a {
+  text-decoration: none;
+  color: black;
+}
+.allNotes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+.noteItem {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: fit-content;
+  margin: 10px 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0);
+}
+.note {
+  width: 97%;
+  height: 20em;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  padding: 10px 15px 10px 28px;
+  box-sizing: border-box;
+}
+.noteTitle {
+  font-weight: bolder;
+  font-size: 1.6em;
+  text-align: center;
+  color: rgb(16, 155, 219);
+}
+.noteDesc {
+  text-align: center;
+}
+#delete {
+  border: none;
+  color: white;
+  background-color: rgb(16, 155, 219);
+  font-size: 1.2em;
+  padding: 5px 10px;
+  margin: 15px 0px 8px 0px;
+}
+#delete:hover {
+  background-color: rgb(14, 126, 179);
+}
+.about{ 
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 48px;
+  height: 93%;
+  width: 100%;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: -2;
+}
+.about p{
+  padding-right: 25px;
+  padding-left: 50px;
+}
+.contact{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 48px;
+  height: 93%;
+  width: 100%;
+  /* justify-content: center; */
+  align-items: center;
+  z-index: -2;
+}
+.contact h2{
+  font-size: 2.5rem;
+}
+.contact p{
+  font-size: 1.6rem;
+}
+
+
+
+/* Media Queries====================================================== */
+
+@media (max-width: 748px) {
+  .noteItem {
+    width: 35%;
+    margin: 10px 20px;
+  }
+  .home .title input {
+    width: 60%;
+  }
+  .home .description {
+    margin-bottom: 10px;
+  }
+  .home .description textarea {
+    width: 60%;
+  }
+  #addBtn {
+    width: 24%;
+    margin: 12px auto 0px auto;
+  }
+}
+
+@media (max-width: 617px) {
+  nav .desktop-menu {
+    display: none;
+  }
+  #burger {
+    display: revert;
+  }
+  .noteItem {
+    width: 40%;
+    margin: 10px 15px;
+  }
+
+  .mobile-menu li .navItem2 {
+    font-size: 1.3em;
+  }
+  .activeM {
+    font-size: 1.3em;
+  }
+  .home .title input {
+    width: 72%;
+  }
+  .home .description textarea {
+    width: 72%;
+  }
+  #addBtn {
+    font-size: 1em;
+    width: 28.8%;
+  }
+  .contact h2{
+    font-size: 2rem;
+  }
+  .contact p{
+    font-size: 1.2rem;
+  }
+ 
+}
+@media (max-width: 480px) {
+  .contact h2{
+    font-size: 1.7rem;
+  }
+  .contact p{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 454px) {
+  img {
+    margin: 3px;
+    width: 23px;
+    height: 23px;
+  }
+  #logo-text {
+    color: white;
+    font-size: 1.5em;
+  }
+  .logo {
+    left: 3px;
+  }
+  .layer {
+    border: 1px solid rgb(255, 255, 255);
+    margin: 8px;
+    width: 26px;
+  }
+  nav {
+    height: 44px;
+  }
+  .mobile-menu {
+    top: 44px;
+    width: 80%;
+  }
+  #notes {
+    top: 44px;
+  }
+  .noteItem {
+    width: 65%;
+    margin: 10px auto;
+  }
+  .home {
+    top: 44px;
+  }
+  .home .title {
+    margin: 17px;
+  }
+  .home .description {
+    margin-bottom: 10px;
+  }
+  .home .title input {
+    width: 85%;
+    font-size: 1em;
+  }
+  .home .description textarea {
+    width: 85%;
+    font-size: 1em;
+  }
+  #addBtn {
+    width: 34%;
+    margin: 8px auto 19px auto;
+  }
+  
+}
+
+@media (max-width: 405px) {
+  .contact h2{
+    font-size: 1.4rem; 
+  }
+  .contact p{
+    font-size: 0.8rem;   
+  }
+}
+@media (max-width: 317px) {
+  .layer {
+    border: 1px solid rgb(255, 255, 255);
+    margin: 8px;
+    width: 20px;
+  }
+  .mobile-menu {
+    width: 100%;
+    right: 0px;
+  }
+  .mobile-menu li .navItem2 {
+    font-size: 0.9em;
+  }
+  .activeM {
+    font-size: 0.9em;
+  }
+
+  .home .title {
+    margin: 14px;
+  }
+  .home .description {
+    margin-bottom: 6px;
+  }
+  .home .title input {
+    font-size: 0.8em;
+  }
+  .home .description textarea {
+    font-size: 0.8em;
+  }
+  #addBtn {
+    margin: 8px auto 12px auto;
+  }
+  .noteItem {
+    width: 75%;
+    margin: 10px auto;
+  }
+  #yourNotes {
+    font-size: 2em;
+  }
+  #notesNull {
+    top: 120px;
+    font-size: 1em;
+    margin: 2px auto;
+  }
+  .noteTitle {
+    font-size: 1.3em;
+  }
+  .noteDesc {
+    font-size: 0.9em;
+  }
+  
+ .about h2{
+margin-left: 12px;
+margin-right: 7px;
+}
+.contact h2{
+  font-size: 1.3rem; 
+}
+.contact p{
+  font-size: 0.7rem;   
+}
+}
+
+@media (max-width: 306px) {
+  .mobile-menu {
+    top: 43px;
+  }
+  .noteItem {
+    width: 88%;
+    margin: 8px auto;
+  }
+  #yourNotes {
+    font-size: 1.5em;
+  }
+  .home .title {
+    margin: 12px;
+  }
+  .home .description {
+    margin-bottom: 8px;
+  }
+  #addBtn {
+    font-size: 0.5em;
+  }
+  .home .title input {
+    font-size: 0.7em;
+  }
+  .home .description textarea {
+    font-size: 0.7em;
+  }
+ 
+  .contact h2{
+    font-size: 1.3em;
+  }
+  .contact p{
+    font-size: 0.9em;
+  }
+  .contact h2{
+    font-size: 1.2rem; 
+  }
+  .contact p{
+    font-size: 0.6rem;   
+  }
+}
